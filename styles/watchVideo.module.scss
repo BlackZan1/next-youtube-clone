@@ -1,0 +1,130 @@
+@import './utils/flex';
+
+.watchV {
+    display: grid;
+    grid-template-columns: 4fr 1.5fr;
+    background: #f9f9f9;
+    padding-top: 2rem;
+    min-height: 90vh;
+    padding-left: 3.5rem;
+}
+
+.watchV_left {
+    width: 100%;
+    min-height: 90vh;
+
+    @include flex(column, flex-start, flex-start);    
+}
+
+.watchV_left_info {
+    width: 90%;
+    margin-top: -4.5rem;
+
+    & > p {
+        font-size: 21px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+
+    & > div {
+        span {
+            font-size: 15px;
+            color: #5e5e5e;
+        }
+    }
+}
+
+.watchV_left_menu {
+    @include flex(row, flex-start, center);    
+
+    & > div:first-child {
+        border-bottom: 2px solid #a9a9a9;
+        padding-bottom: 1.2rem;
+        margin-bottom: -1.2rem;
+
+        span {
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+            color: #9b9898;
+            transition: color .3s ease;
+
+            &:hover {
+                color: #5e5e5e;
+            }
+        }
+    }
+    
+    & > div:not(:first-child) {
+        font-size: 16px;
+        margin: 0 10px;
+        color: #9b9898;
+        cursor: pointer;
+
+        svg {
+            font-size: 20px;
+            margin-bottom: -5px;
+        }
+
+        &:hover {
+            color: #696969;
+        }
+    }
+}
+
+.watchV_left_image {
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 2rem;
+
+    @include flexColCenter();
+}
+
+.watchV_left_desc {
+    padding: 2rem;
+
+    & > div:first-child {
+        @include flex(row, flex-start, center);
+
+        & > div:nth-child(2) {
+            width: 80%;
+
+            & > p {
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: -2px;
+            }
+
+            & > span {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.watchV_right {
+    margin-right: 2.5rem;
+
+    & > p {
+        margin: 0 0 15px 0;
+        font-size: 18px;
+    }
+}
+
+.watchV_video {
+    width: inherit;
+    height: 45rem;
+    // margin-bottom: -7.5%;
+
+    @include flex(column, flex-start, flex-start);
+
+    & > iframe {
+        box-shadow: 1.5px 1.5px 6px #a9a9a9;
+        width: 90%;
+        height: 100% !important;
+        border-radius: 15px;
+        max-height: 650px;
+    }
+}   

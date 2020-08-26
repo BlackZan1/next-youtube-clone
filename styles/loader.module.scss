@@ -1,0 +1,13 @@
+@import './utils/flex';
+
+.mainLoader {
+    @include flexColCenter();
+
+    height: 94vh;
+    width: 100%;
+    background: #f9f9f9;
+
+    & > img {
+        width: 350px;
+    }
+}

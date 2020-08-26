@@ -1,0 +1,100 @@
+@import './utils/flex';
+
+.videoIt {
+    margin: 10px;
+    width: 80%;
+    padding-bottom: 2rem;
+
+    @include flex(column, center, flex-start);
+}
+
+.videoItImage {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px rgba($color: #000000, $alpha: 0.4);
+    background: #dcdcdc;
+
+    @include flexColCenter();
+
+    & > img {
+        width: 100%;
+    }
+}
+
+.videoItBottom {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.8fr 2fr;
+}
+
+.videoItChannel {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    border: 1px solid #a9a9a9;
+
+    @include flexColCenter();
+
+    margin-top: -1.6rem;
+    margin-left: 1.3rem;
+
+    & > img {
+        height: 100%;
+    }
+}
+
+.videoItInfo {
+    & > p {
+        transition: color .25s ease;
+        font-size: 18px;
+        font-weight: 500;
+        color: #323232;
+        margin-bottom: 5px;
+        line-height: 1.5rem;
+    }
+
+    & > span {
+        display: block;
+        font-size: 15px;
+        color: #323232;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 1275px) and (min-width: 1050px) {
+    .videoItInfo {
+        & > p {
+            font-size: 17px;
+        }
+
+        & > span {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 1050px) and (min-width: 720px) {
+    .videoItInfo {
+        & > p {
+            font-size: 16px;
+        }
+
+        & > span {
+            font-size: 13px;
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .videoItInfo {
+        & > p {
+            font-size: 14px;
+        }
+
+        & > span {
+            font-size: 11px;
+        }
+    }
+}

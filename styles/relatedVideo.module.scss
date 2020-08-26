@@ -1,0 +1,34 @@
+@import './utils/flex';
+
+.relatedV {
+    @include flex(row, flex-start, flex-start);
+    
+    margin: 1rem 0;
+}
+
+.relatedV_image {
+    padding-right: 1rem;
+
+    & > img {
+        border-radius: 10px;
+        border: 1px solid #dcdcdc;
+        box-shadow: 1px 1px 5px #a9a9a9;
+        width: 165px;
+    }
+}
+
+.relatedV_info {
+    @include flex(column, flex-start, flex-start);
+
+    & > p {
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0 0 10px;
+    }
+
+    & > span {
+        font-size: 12px;
+        margin-bottom: 5px;
+        display: block;
+    }
+}

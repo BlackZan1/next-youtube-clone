@@ -1,0 +1,33 @@
+@import './utils/flex';
+
+.videoW {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background: #f9f9f9;
+    padding: 3rem 0;
+    position: relative;
+    
+    & > div {
+        @include flex(column, flex-start, center);
+
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1275px) and (min-width: 1050px) {
+    .videoW {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1050px) and (min-width: 720px) {
+    .videoW {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .videoW {
+        grid-template-columns: 1fr;
+    }
+}

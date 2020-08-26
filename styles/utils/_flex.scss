@@ -1,0 +1,15 @@
+@mixin flexColCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex($fd, $jt, $at) {
+    display: flex;
+    flex-direction: $fd;
+    align-items: $at;
+    justify-content: $jt;
+
+    @content;
+}
